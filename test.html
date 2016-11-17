@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/test.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+<div class="wrapper">
+<ul>
+    <li><a id="home" class="link" href="#">Home</a></li>
+    <li><a id="profile" class="link" href="#">Profile</a></li>
+    <li><a id="logout" class="link" href="#">Logout</a></li>
+</ul>
+<div class="sep1"></div>
+<div class="header">
+    <p class="title">Dashboard</p>
+    <div class="nav">
+        <p id="nav_item_home">Home</p>
+        <p id="nav_item_user_list">Users list</p>
+        <p id="nav_item_profile">Profile</p>
+        <p id="nav_item_edit">Edit</p>
+    </div>
+</div>
+<div id="home_information">
+    <div class="sep"></div>
+    <table class="table" >
+        <thead><tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>Birthday</th>
+            <th>City</th>
+            <th>Active</th>
+            <th>Boss</th>
+        </tr></thead>
+       <tbody></tbody>
+    </table>
+</div>
+<div class="hide_item profile_info">
+    <div class="profile_ifo_item">
+        <p id="info_id"></p>
+    </div>
+    <div class="profile_ifo_item">Name:
+        <p id="info_name"></p>
+    </div>
+    <div class="profile_ifo_item">Birthday:
+        <p id="info_birth"></p>
+    </div>
+    <div class="profile_ifo_item">City:
+        <p id="info_city"></p>
+    </div>
+    <a href="" id="edit">EDIT</a>
+</div>
+<div class="hide_item form">
+    <div class="input-prepend">
+        <input class="span2" id="username" size="16" type="text" placeholder="Username">
+    </div>
+    <div class="input-prepend">
+        <input class="span2" id="birthday" size="16" type="number" placeholder="Birthday">
+    </div>
+    <div class="input-prepend">
+        <input class="span2" id="city" size="16" type="text" placeholder="City">
+    </div>
+    <button type="button" class="btn btn-success">SAVE</button>
+</div>
+</div>
+</body>
+</html>
