@@ -30,6 +30,8 @@ $(function(){
         }];
 
 
+
+
     var tableWrite = function() {
         var tableBody = '';
         for (i = 0; i < usersArr.length; i++) {
@@ -67,13 +69,43 @@ $(function(){
         $('#profile').css({'background-color':'#3d8bcd', 'color':'white'});
         $('#home').css({'background-color':'white', 'color':'#3d8bcd'});
         $('#nav_item_user_list').css('font-weight', '400').show();
-        $('#nav_item_profile').css({'font-weight':'bold', 'display':'inline'});
         $('.title').text('Profile');
+        $('#nav_item_edit').hide();
+        $('#nav_item_profile').css({'font-weight':'bold', 'display':'inline'});
 
     };
 
 
     tableWrite();
+
+
+    $('#nav_item_home').click(function(e){
+
+        e.preventDefault();
+
+
+        homeInfo()
+
+    });
+
+    $('#nav_item_user_list').click(function(e){
+
+        e.preventDefault();
+
+        homeInfo()
+
+
+    });
+
+    $('#nav_item_profile').click(function(e){
+
+        e.preventDefault();
+
+        profileInfo();
+
+
+    });
+
 
     $('#edit').click(function (e){
 
@@ -85,6 +117,9 @@ $(function(){
         $('#nav_item_edit').css({'font-weight':'bold', 'display':'inline' });
         $('#nav_item_profile').css('font-weight','400');
         $('.title').text('Edit profile');
+        $('#username').val($('#info_name').html());
+        $('#birthday').val($('#info_birth').html());
+        $('#city').val($('#info_city').html());
     });
 
 
@@ -97,6 +132,9 @@ $(function(){
         $('#info_name').html($(this).find('.list_name').html());
         $('#info_birth').html($(this).find('.list_birthday').html());
         $('#info_city').html($(this).find('.list_city').html());
+        $('#nav_item_profile').html($(this).find('.list_name').html());
+
+
 
     });
 
@@ -107,11 +145,11 @@ $(function(){
                 usersArr[i].username = $('#username').val();
                 usersArr[i].birthday = $('#birthday').val();
                 usersArr[i].city = $('#city').val();
+            }
+
+        }
 
 
-                console.log(usersArr[i].id)
-
-         }}
         tableWrite();
         homeInfo();
 

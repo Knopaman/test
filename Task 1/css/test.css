@@ -21,6 +21,7 @@ a.link {
     display: inline-block;
     border-radius: 4px;
     text-decoration: none;
+    cursor: alias;
 }
 
 #home {
@@ -58,6 +59,7 @@ a.link {
     padding: 0 20px 0 20px;
     line-height: 28px;
     color: #3d8bcd;
+    cursor: pointer;
 }
 
 #nav_item_user_list {
